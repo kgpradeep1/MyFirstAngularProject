@@ -1,0 +1,15 @@
+<h3 style="text-align: center;">Newly arrived</h3>
+<div class="container-fluid" style="margin-top: 15px;" >
+    <div class="row">
+      <div class="col-lg-3" style="text-align: center;">
+       <app-productsub  [product]="productItem" *ngFor="let productItem of products"></app-productsub>
+      </div>
+      <div class="col-md-6" >
+        <app-product [product]="productItem" *ngFor="let productItem of products" >
+        </app-product>
+      </div>
+      <div class="col-lg-3" style="text-align: centergfvxc;">
+        <app-productsub  [product]="productItem" *ngFor="let productItem of products"></app-productsub>
+      </div>
+    </div>
+  </div>
