@@ -1,5 +1,5 @@
 body{
-    background: #F4F7FD;
+    background: #020b1d;
     margin-top:20px;
 }
 
@@ -20,9 +20,9 @@ body{
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: lightgray;
+    background-color: rgba(72, 68, 68, 0.788);
     background-clip: border-box;
-    border: 1px solid #e6e4e9;
+    box-shadow: 0 4px 8px 0 rgba(72, 68, 68, 0.788);
     border-radius: 8px;
 }
 

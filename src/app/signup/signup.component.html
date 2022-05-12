@@ -1,0 +1,64 @@
+<!--Registration Form-->
+<div style="background-color: gray;">
+<div class="container" style="border-radius: 25px; border: 3px solid black; width: 500px; background-color: #696975; margin-top: 0px;"id="1"   >
+    <!--Consuming Web API and displaying in the table (READ OPERATION -> GET)-->
+    
+    <!--Creating a user using Web API (Create Operation -> POST)-->
+    <div class="container">      
+        <div class="row">    
+            <div class="form_bg"> 
+                <!--accessing onSubmit() from user-registration.component.ts-->               
+                <form [formGroup]="userForm" (ngSubmit)="onSubmit()">    
+                     <h2 class="text-center">Registration page</h2>  
+                    <br/>  
+                    <div class="form-group"> 
+                        <label for="NAME">NAME</label>   
+                        <input type="text" class="form-control"  
+                        formControlName="NAME">     
+                    </div> 
+                  
+                    <div class="form-group"> 
+                        <label for="Email">Email</label>   
+                        <input type="text" class="form-control"  
+                        placeholder="sample@example.com" formControlName="Email">     
+                    </div>     
+                    <div class="form-group"> 
+                        <label for="MobileNumber">MobileNumber</label>
+                        <input type="text" class="form-control" id="username" 
+                        formControlName="MobileNumber">    
+                       </div>     
+                       <div class="form-group"> 
+                        <label for="Password">Password</label>
+                        <input type="text" class="form-control" id="password" 
+                        formControlName="Password">    
+                       </div>                     
+                    <br/>     
+                    <div class="align-center">  
+                        <button type="submit" 
+                        class="btn btn-primary" id="Register">Register</button>   
+                    </div>  
+                </form>
+            </div>
+        </div>
+        <table class="table table-responsive" >
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>NAME</th>
+                    <th>Email</th>
+                    <th>MobileNumber</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let u of allUsers |async;">
+                    <td> {{u.id}}</td>
+                    <td> {{u.NAME}}</td>
+                    <td> {{u.Email}}</td>
+                    <td>{{u.MobileNumber}}</td>
+                    <td>{{u.Password}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
