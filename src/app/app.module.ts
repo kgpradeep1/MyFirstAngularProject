@@ -23,6 +23,7 @@ import { Cards2Component } from './cards2/cards2.component';
 
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -45,7 +46,8 @@ import { LoginComponent } from './login/login.component';
          Cards2Component,
          
          SignupComponent,
-                   LoginComponent
+                   LoginComponent,
+                   ContactComponent
          
   ],
   imports: [

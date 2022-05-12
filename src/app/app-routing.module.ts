@@ -4,8 +4,8 @@ import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { LoginComponent } from './login/login.component';
-
 import { SignupComponent } from './signup/signup.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -16,6 +16,7 @@ const routes: Routes = [
    {path:'' ,component:HomeComponent },
    {path:'products',component:ProductsComponent},
    {path:'login' ,component:LoginComponent},
+   {path:'contact',component:ContactComponent},
    {path:'signup',component:SignupComponent}
    
   
