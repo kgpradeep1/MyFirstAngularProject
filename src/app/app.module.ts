@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -17,13 +17,27 @@ import { ProductComponent } from './products/product/product.component';
 import { ProductsubComponent } from './products/productsub/productsub.component';
 import { CounterComponent } from './products/counter/counter.component';
 import { CounterchildComponent } from './products/counter/counterchild/counterchild.component';
-
+import { MatButtonModule, } from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Cards2Component } from './cards2/cards2.component';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatFormFieldModule} from '@angular/material/form-field';  
+import {MatInputModule} from '@angular/material/input';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatRadioModule } from '@angular/material/radio';  
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeService } from './employee.service';
 
 
 
@@ -47,16 +61,31 @@ import { ContactComponent } from './contact/contact.component';
          
          SignupComponent,
                    LoginComponent,
-                   ContactComponent
+                   ContactComponent,
+                   EmployeeComponent
          
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatCardModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatRadioModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

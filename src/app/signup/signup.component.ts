@@ -48,7 +48,7 @@ export class SignupComponent implements OnInit
       //to a variety of components or services that have subscribed to the observable.
       this.userservice.createUser(user).subscribe(
         () => {
-          this.dataSaved = true;
+         // this.dataSaved = true;
           this.massage = 'Record saved Successfully';
           this.loadAllUsers();
           this.userIdUpdate = null;
@@ -58,7 +58,7 @@ export class SignupComponent implements OnInit
     } else {
       user.id = this.userIdUpdate;
       this.userservice.updateEmployee(user).subscribe(() => {
-        this.dataSaved = true;
+        //this.dataSaved = true;
         this.massage = 'Record Updated Successfully';
         this.loadAllUsers();
         this.userIdUpdate = null;
